@@ -1,0 +1,16 @@
+## VS Code Setup
+## VSCode Extensions
+1. Django
+publisher:"Roberth Solís"
+
+2. Django Template
+publisher:"bibhasdn"
+
+## Starting a Project
+ctrl + ` :: Open Terminal
+pip install virtualenv :: Install Virtual Environment
+virtualenv name :: give a name
+envName\Scripts\activate :: activate the Environment
+pip install django==3.1.6 :: install Django
+pip freeze > requirements.txt :: to see the dependencies
+django-admin startproject name .
