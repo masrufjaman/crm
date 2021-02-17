@@ -18,3 +18,16 @@ django-admin startproject name .
 ## Server and Migrations
 python manage.py runserver :: to run the Server
 python manage.py migrate
+
+## Leads App
+python manage.py startapp leads
+ADD in settings.py:
+INSTALLED_APPS = [
+    'leads'
+]
+
+## Django Models:
+python manage.py makemigrations
+python manage.py migrate
+Install SQLite Extensions
+ctrl + shift + p then open SQLite Database
