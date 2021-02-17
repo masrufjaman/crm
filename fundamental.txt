@@ -14,3 +14,7 @@ envName\Scripts\activate :: activate the Environment
 pip install django==3.1.6 :: install Django
 pip freeze > requirements.txt :: to see the dependencies
 django-admin startproject name .
+
+## Server and Migrations
+python manage.py runserver :: to run the Server
+python manage.py migrate
