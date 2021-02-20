@@ -57,3 +57,6 @@ mas_agent = Agent.objects.get(user__email="mas@gmail.com")
 Lead.objects.create(first_name="Mas", last_name="ruf", age=23, agent=mas_agent)
 from leads.models import Lead
 Lead.objects.all()
+
+## Django Admin
+python manage.py runserver
