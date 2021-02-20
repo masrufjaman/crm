@@ -31,3 +31,6 @@ python manage.py makemigrations
 python manage.py migrate
 Install SQLite Extensions
 ctrl + shift + p then open SQLite Database
+
+## Custom User Model
+from django.contrib.auth.models import AbstractUser
