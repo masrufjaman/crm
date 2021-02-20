@@ -34,3 +34,26 @@ ctrl + shift + p then open SQLite Database
 
 ## Custom User Model
 from django.contrib.auth.models import AbstractUser
+python manage.py migrate
+
+## Querysets and Managers
+exit()
+python manage.py shell
+from leads.models import Lead
+Lead.objects.all()
+exit()
+python manage.py createsuperuser
+python manage.py shell
+from django.contrib.auth import get_user_model
+User = get_user_model()
+User.objects.all()
+from leads.models import Agent
+admin_user = User.objects.get(username="mas")
+agent = Agent.objects.create(user=admin_user)
+from leads.models import Agent
+Agent.objects.all()
+from leads.models import Lead
+mas_agent = Agent.objects.get(user__email="mas@gmail.com")
+Lead.objects.create(first_name="Mas", last_name="ruf", age=23, agent=mas_agent)
+from leads.models import Lead
+Lead.objects.all()
