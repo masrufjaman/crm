@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Lead
+from .models import Lead, Agent
 from .forms import LeadForm
 
 # Create your views here.
@@ -35,6 +35,14 @@ def lead_create(request):
             last_name = form.cleaned_data['last_name']
             age = form.cleaned_data['age']
             agent = Agent.objects.first()
+            Lead.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                age=age,
+                agent=agent
+            )
+            print("The lead has been created")
+            return redirect("/leads")
     context = {
         "form": LeadForm()
     }
